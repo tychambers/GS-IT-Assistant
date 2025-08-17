@@ -6,8 +6,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
 
 # --- Config ---
-OPENAI_API_KEY = "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"
-PINECONE_API_KEY = "pcsk_6xTzeP_Tzy3KhUu5KrpcU9ia5Suy7onSWVtkSSoBFZEvT84yZGdua5zezn88Zs6Qq2rCVM"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 INDEX_NAME = "eft-docs"
 
 # OpenAI + Pinecone clients
