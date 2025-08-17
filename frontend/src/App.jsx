@@ -3,6 +3,8 @@ import axios from "axios";
 import PopupBox from "./popup";
 import "../styles/styles.css"
 
+const API_BASE = "https://gs-it-assistant.onrender.com";
+
 function App() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -13,7 +15,7 @@ function App() {
     if (!question.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/ask", {
+      const res = await axios.post(`${API_BASE}/ask`, {
         query: question
       });
       setAnswer(res.data.answer);
