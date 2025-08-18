@@ -3,7 +3,7 @@ import axios from "axios";
 import PopupBox from "./popup";
 import "../styles/styles.css"
 
-const API_BASE = "https://gs-it-assistant.onrender.com";
+const API_BASE = "https://fastapi-assistant2-latest.onrender.com";
 
 function App() {
   const [question, setQuestion] = useState("");
